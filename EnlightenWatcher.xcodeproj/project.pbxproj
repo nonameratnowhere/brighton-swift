@@ -28,6 +28,7 @@
 		E4D7A68B1F2074E000A64C20 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4D7A66F1F20736000A64C20 /* SwiftyJSON.framework */; };
 		E4D7A6931F2075C500A64C20 /* Specs.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D7A6921F2075C500A64C20 /* Specs.swift */; };
 		E4D7A6AF1F2075F600A64C20 /* Features.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D7A6AE1F2075F600A64C20 /* Features.swift */; };
+		E4D7A6BA1F207D1F00A64C20 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D7A6B91F207D1F00A64C20 /* R.generated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,11 +95,10 @@
 		E4D7A6901F2075C500A64C20 /* Specs.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Specs.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4D7A6921F2075C500A64C20 /* Specs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Specs.swift; sourceTree = "<group>"; };
 		E4D7A6941F2075C500A64C20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E4D7A6A01F2075E400A64C20 /* Features.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features.swift; sourceTree = "<group>"; };
-		E4D7A6A21F2075E400A64C20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4D7A6AC1F2075F600A64C20 /* Features.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Features.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4D7A6AE1F2075F600A64C20 /* Features.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features.swift; sourceTree = "<group>"; };
 		E4D7A6B01F2075F600A64C20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4D7A6B91F207D1F00A64C20 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,7 +136,6 @@
 		E4D7A5C21F206BBC00A64C20 = {
 			isa = PBXGroup;
 			children = (
-				E4D7A69F1F2075E400A64C20 /* Features */,
 				E4D7A6AD1F2075F600A64C20 /* Features */,
 				E4D7A6621F2071E200A64C20 /* Frameworks */,
 				E4D7A5CC1F206BBC00A64C20 /* Products */,
@@ -158,6 +157,7 @@
 		E4D7A5CD1F206BBC00A64C20 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				E4D7A6B91F207D1F00A64C20 /* R.generated.swift */,
 				E4D7A5CE1F206BBC00A64C20 /* AppDelegate.swift */,
 				E4D7A5D01F206BBC00A64C20 /* ViewController.swift */,
 				E4D7A5D21F206BBC00A64C20 /* Main.storyboard */,
@@ -200,15 +200,6 @@
 			path = Specs;
 			sourceTree = "<group>";
 		};
-		E4D7A69F1F2075E400A64C20 /* Features */ = {
-			isa = PBXGroup;
-			children = (
-				E4D7A6A01F2075E400A64C20 /* Features.swift */,
-				E4D7A6A21F2075E400A64C20 /* Info.plist */,
-			);
-			path = Features;
-			sourceTree = "<group>";
-		};
 		E4D7A6AD1F2075F600A64C20 /* Features */ = {
 			isa = PBXGroup;
 			children = (
@@ -225,6 +216,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E4D7A5F31F206BBD00A64C20 /* Build configuration list for PBXNativeTarget "EnlightenWatcher" */;
 			buildPhases = (
+				E4D7A6B61F20799400A64C20 /* [R.swift] Generate R.generated.swift */,
 				E4D7A5C71F206BBC00A64C20 /* Sources */,
 				E4D7A5C81F206BBC00A64C20 /* Frameworks */,
 				E4D7A5C91F206BBC00A64C20 /* Resources */,
@@ -374,6 +366,20 @@
 			shellPath = /bin/sh;
 			shellScript = "carthage copy-frameworks\n";
 		};
+		E4D7A6B61F20799400A64C20 /* [R.swift] Generate R.generated.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[R.swift] Generate R.generated.swift";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd \"$SRCROOT/\"\n\"$SRCROOT/R.swift/.build/release/rswift\" \"$SRCROOT\"";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -383,6 +389,7 @@
 			files = (
 				E4D7A5D11F206BBC00A64C20 /* ViewController.swift in Sources */,
 				E4D7A5CF1F206BBC00A64C20 /* AppDelegate.swift in Sources */,
+				E4D7A6BA1F207D1F00A64C20 /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -539,7 +546,7 @@
 				DEVELOPMENT_TEAM = T766G7M29P;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Frameworks",
+					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = Sources/Info.plist;
@@ -557,7 +564,7 @@
 				DEVELOPMENT_TEAM = T766G7M29P;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Frameworks",
+					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = Sources/Info.plist;
