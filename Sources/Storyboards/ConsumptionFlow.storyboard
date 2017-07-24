@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dVs-45-lvV">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="aWb-gb-7Gv">
+            <objects>
+                <viewController id="dVs-45-lvV" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jIF-TI-PFc"/>
+                        <viewControllerLayoutGuide type="bottom" id="RD7-Xs-GWR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3y4-bQ-Uru">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Consumption" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xEn-Qs-xhh">
+                                <rect key="frame" x="28.5" y="303.5" width="318" height="60"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xEn-Qs-xhh" firstAttribute="centerY" secondItem="3y4-bQ-Uru" secondAttribute="centerY" id="MGb-sE-qkG"/>
+                            <constraint firstItem="xEn-Qs-xhh" firstAttribute="centerX" secondItem="3y4-bQ-Uru" secondAttribute="centerX" id="REl-ze-Y1F"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="NyF-3P-UUz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZrW-Ps-7AW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-94" y="-9"/>
+        </scene>
+    </scenes>
+</document>

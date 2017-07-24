@@ -1,6 +1,5 @@
 github "Alamofire/Alamofire" ~> 4.5
 github "Alamofire/AlamofireImage" ~> 3.2
 github "ReactiveCocoa/ReactiveCocoa" ~> 5.0
-github "mac-cain13/R.swift.Library" ~> 3.0
 github "SwiftyJSON/SwiftyJSON" ~> 3.1
 
