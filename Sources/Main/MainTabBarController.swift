@@ -10,7 +10,7 @@ import UIKit
 
 class MainTabBarController: UITabBarController, Coordinated {
   
-  var coordinator: Coordinator?
+  var coordinator: Coordination.Coordinator?
   
   override func viewDidLoad() {
     super.viewDidLoad()

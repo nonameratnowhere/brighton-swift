@@ -9,7 +9,8 @@
 import UIKit
 
 class InitializationWarningViewController: UIViewController, Coordinated {
-  var coordinator: Coordinator?
+  
+  var coordinator: Coordination.Coordinator?
   
   override func viewDidLoad() {
     super.viewDidLoad()

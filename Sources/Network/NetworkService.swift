@@ -9,6 +9,8 @@
 import Foundation
 import Alamofire
 
-class Network {
+struct Network {
+  class NetworkService {
+  }
 }
 

@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		E401F6531F221B2B009EE2F1 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E401F6521F221B2B009EE2F1 /* Coordinator.swift */; };
-		E401F6561F221F5F009EE2F1 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = E401F6551F221F5F009EE2F1 /* Network.swift */; };
-		E401F6591F237BC0009EE2F1 /* EnvoySAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E401F6581F237BC0009EE2F1 /* EnvoySAPI.swift */; };
+		E401F6561F221F5F009EE2F1 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E401F6551F221F5F009EE2F1 /* NetworkService.swift */; };
+		E401F6591F237BC0009EE2F1 /* EnvoySLocalAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E401F6581F237BC0009EE2F1 /* EnvoySLocalAPI.swift */; };
 		E462CAF81F2603180014B601 /* OverviewFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E462CAF71F2603180014B601 /* OverviewFlow.storyboard */; };
 		E462CAFA1F2603330014B601 /* ProductionFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E462CAF91F2603330014B601 /* ProductionFlow.storyboard */; };
 		E462CAFC1F2603410014B601 /* ConsumptionFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E462CAFB1F2603410014B601 /* ConsumptionFlow.storyboard */; };
@@ -77,8 +77,8 @@
 
 /* Begin PBXFileReference section */
 		E401F6521F221B2B009EE2F1 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
-		E401F6551F221F5F009EE2F1 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
-		E401F6581F237BC0009EE2F1 /* EnvoySAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnvoySAPI.swift; sourceTree = "<group>"; };
+		E401F6551F221F5F009EE2F1 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		E401F6581F237BC0009EE2F1 /* EnvoySLocalAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnvoySLocalAPI.swift; sourceTree = "<group>"; };
 		E462CAF71F2603180014B601 /* OverviewFlow.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = OverviewFlow.storyboard; sourceTree = "<group>"; };
 		E462CAF91F2603330014B601 /* ProductionFlow.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProductionFlow.storyboard; sourceTree = "<group>"; };
 		E462CAFB1F2603410014B601 /* ConsumptionFlow.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ConsumptionFlow.storyboard; sourceTree = "<group>"; };
@@ -166,8 +166,8 @@
 		E401F6541F221EB4009EE2F1 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				E401F6551F221F5F009EE2F1 /* Network.swift */,
-				E401F6581F237BC0009EE2F1 /* EnvoySAPI.swift */,
+				E401F6551F221F5F009EE2F1 /* NetworkService.swift */,
+				E401F6581F237BC0009EE2F1 /* EnvoySLocalAPI.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -444,13 +444,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E401F6561F221F5F009EE2F1 /* Network.swift in Sources */,
+				E401F6561F221F5F009EE2F1 /* NetworkService.swift in Sources */,
 				E462CB011F26253D0014B601 /* InitializationWarningViewController.swift in Sources */,
 				E462CB041F2642270014B601 /* OverviewViewController.swift in Sources */,
 				E401F6531F221B2B009EE2F1 /* Coordinator.swift in Sources */,
 				E462CAFF1F260EBE0014B601 /* MainTabBarController.swift in Sources */,
 				E4D7A5CF1F206BBC00A64C20 /* AppDelegate.swift in Sources */,
-				E401F6591F237BC0009EE2F1 /* EnvoySAPI.swift in Sources */,
+				E401F6591F237BC0009EE2F1 /* EnvoySLocalAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

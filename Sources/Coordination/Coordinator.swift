@@ -10,47 +10,50 @@ import Foundation
 import UIKit
 
 protocol Coordinated {
-  var coordinator: Coordinator? { get set }
+  var coordinator: Coordination.Coordinator? { get set }
 }
 
-class Coordinator: Coordinated {
-  var coordinator: Coordinator?
+struct Coordination {
   
-  private weak var window: UIWindow?
-  private var appInitialized: Bool = false
-  
-  let network: Network
-  
-  init(_ window: UIWindow) {
-    self.window = window
+  class Coordinator: Coordinated {
+    var coordinator: Coordinator?
     
-    network = Network()
-  }
-  
-  func appInitialization() {
-    print("App initializing...")
+    private weak var window: UIWindow?
+    private var appInitialized: Bool = false
     
-    if appInitialized {
-      displayMainScreen()
-    } else {
-      appInitialized = true
-      displayInitializationWarning()
+    let network: Network
+    
+    init(_ window: UIWindow) {
+      self.window = window
+      
+      network = Network()
     }
-  }
-  
-  func displayMainScreen() {
-    print("App initialized")
-    let mainTabBarController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() as! MainTabBarController
     
-    mainTabBarController.coordinator = self
-    window?.rootViewController = mainTabBarController
-  }
-  
-  private func displayInitializationWarning() {
-    print("App initialzation failure")
-    let warningViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "InitializationWarning") as! InitializationWarningViewController
+    func appInitialization() {
+      print("App initializing...")
+      
+      if appInitialized {
+        displayMainScreen()
+      } else {
+        appInitialized = true
+        displayInitializationWarning()
+      }
+    }
     
-    warningViewController.coordinator = self
-    window?.rootViewController = warningViewController
+    func displayMainScreen() {
+      print("App initialized")
+      let mainTabBarController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() as! MainTabBarController
+      
+      mainTabBarController.coordinator = self
+      window?.rootViewController = mainTabBarController
+    }
+    
+    private func displayInitializationWarning() {
+      print("App initialzation failure")
+      let warningViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "InitializationWarning") as! InitializationWarningViewController
+      
+      warningViewController.coordinator = self
+      window?.rootViewController = warningViewController
+    }
   }
 }
